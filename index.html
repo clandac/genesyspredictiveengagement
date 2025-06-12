@@ -3,80 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Landa Online Shop - Electronics</title>
+    <title>Carlos Landa Online Shop - Modern Electronics</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter (mimicking Genesys' sans-serif choice) -->
+    <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
-        /* Custom styles to mimic specific Genesys branding elements */
-        .genesys-blue {
-            background-color: #0F2D52;
+        /* Custom brand colors inspired by Genesys, adapted for a modern look */
+        .brand-primary {
+            background-color: #1a202c; /* Dark charcoal/navy for main background */
         }
-        .genesys-light-blue {
-            color: #0F2D52;
+        .brand-text-primary {
+            color: #1a202c;
         }
-        .genesys-accent-orange {
-            background-color: #FF7B00;
+        .brand-accent-orange {
+            background-color: #f6ad55; /* Soft orange for accents */
         }
-        .genesys-accent-orange-text {
-            color: #FF7B00;
+        .brand-text-accent-orange {
+            color: #f6ad55;
         }
-        .genesys-secondary-bg {
-            background-color: #E6EBF0;
+        .brand-secondary-bg {
+            background-color: #f7fafc; /* Light gray for sections */
         }
-        .active-nav-border {
-            border-bottom: 2px solid #FF7B00;
+        .nav-active-border {
+            border-bottom: 2px solid #f6ad55;
             padding-bottom: 4px;
+        }
+        .icon-btn {
+            @apply text-gray-600 hover:text-gray-900 transition-colors duration-300 focus:outline-none;
         }
     </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
     <!-- Top Announcement Bar -->
-    <div class="bg-gray-100 text-gray-700 text-center text-sm py-2 px-4 rounded-b-lg">
-        <p>Welcome to Carlos Landa Online Shop! Discover unique items. <a href="#" class="genesys-accent-orange-text hover:underline font-semibold">Shop Now</a></p>
+    <div class="bg-gradient-to-r from-blue-700 to-indigo-700 text-white text-center text-sm py-2 px-4 rounded-b-lg shadow-md">
+        <p>✨ Discover the Future of Tech! Free shipping on all orders over $100! ✨</p>
     </div>
 
     <!-- Header Section -->
-    <header class="bg-white shadow-md py-4 px-6 md:px-8 lg:px-12 rounded-b-lg">
+    <header class="bg-white shadow-lg py-4 px-6 md:px-8 lg:px-12 rounded-b-xl">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo -->
-            <a href="index.html" class="text-3xl font-extrabold genesys-light-blue tracking-tight">
-                CARLOS LANDA
+            <a href="index.html" class="text-4xl font-extrabold tracking-tight brand-text-primary">
+                Carlos <span class="brand-text-accent-orange">Landa</span>
             </a>
 
             <!-- Navigation (Hidden on small screens, shown on medium and larger) -->
             <nav class="hidden md:flex space-x-6 lg:space-x-10 items-center">
-                <a href="index.html" class="text-gray-700 hover:genesys-accent-orange-text transition duration-300 font-medium text-lg">Home</a>
-                <a href="#" class="text-gray-700 hover:genesys-accent-orange-text transition duration-300 font-medium text-lg">Shop</a>
-                <a href="#" class="text-gray-700 hover:genesys-accent-orange-text transition duration-300 font-medium text-lg active-nav-border">Categories</a>
-                <a href="#" class="text-gray-700 hover:genesys-accent-orange-text transition duration-300 font-medium text-lg">About Us</a>
-                <a href="#" class="text-gray-700 hover:genesys-accent-orange-text transition duration-300 font-medium text-lg">Contact</a>
+                <a href="#" class="text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors duration-300 nav-active-border">Home</a>
+                <a href="#products" class="text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors duration-300">Shop</a>
+                <a href="#categories" class="text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors duration-300">Categories</a>
+                <a href="#" class="text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors duration-300">About</a>
+                <a href="#" class="text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors duration-300">Contact</a>
             </nav>
 
-            <!-- Action Icons & Search -->
+            <!-- Action Icons -->
             <div class="flex items-center space-x-4">
                 <!-- Search Icon -->
-                <button class="text-gray-700 hover:genesys-accent-orange-text text-xl focus:outline-none" aria-label="Search">
+                <button class="icon-btn" aria-label="Search">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                 </button>
                 <!-- User/Account Icon -->
-                <button class="text-gray-700 hover:genesys-accent-orange-text text-xl focus:outline-none" aria-label="Account">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                </button>
+                <div class="relative group">
+                    <button class="icon-btn" aria-label="Account">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                    </button>
+                    <!-- Dropdown for Account options -->
+                    <div class="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-1 hidden group-hover:block transition-all duration-300 ease-in-out transform scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 origin-top-right">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign In</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 font-semibold">Register New Account</a>
+                    </div>
+                </div>
                 <!-- Cart Icon -->
-                <button class="text-gray-700 hover:genesys-accent-orange-text text-xl focus:outline-none relative" aria-label="Shopping Cart">
+                <button class="icon-btn relative" aria-label="Shopping Cart">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.182 1.705.438 2.316l.128.106a1.996 1.996 0 001.071.558H19m-1.5 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
                     </svg>
@@ -91,98 +101,156 @@
         </div>
     </header>
 
-    <!-- Page Header/Breadcrumbs -->
-    <section class="bg-gray-100 py-8 px-6 md:px-8 lg:px-12 rounded-b-lg">
-        <div class="container mx-auto">
-            <h1 class="text-4xl font-bold genesys-light-blue mb-2">Electronics</h1>
-            <nav class="text-sm text-gray-600">
-                <a href="index.html" class="hover:underline">Home</a> &gt; <a href="#" class="hover:underline">Categories</a> &gt; <span class="font-semibold">Electronics</span>
-            </nav>
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-indigo-700 to-blue-800 text-white py-20 md:py-32 px-4 overflow-hidden rounded-b-3xl shadow-xl">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-12 md:gap-20">
+            <!-- Hero Content -->
+            <div class="w-full md:w-1/2 text-center md:text-left z-10">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                    Cutting-Edge Electronics, Curated For You.
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 opacity-90 animate-fade-in-up">
+                    Explore the latest in smartphones, smartwatches, laptops, and more.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#products" class="inline-block brand-accent-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-xl transition duration-300 transform hover:scale-105">
+                        Shop Latest Tech
+                    </a>
+                    <a href="#" class="inline-block border-2 border-white text-white hover:bg-white hover:text-indigo-700 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                        Register Now
+                    </a>
+                </div>
+            </div>
+            <!-- Hero Image: Collage of devices -->
+            <div class="w-full md:w-1/2 flex justify-center md:justify-end z-10">
+                <img src="https://placehold.co/600x400/1a202c/ffffff?text=Modern+Electronics+Collection" alt="Collection of modern electronic devices" class="rounded-3xl shadow-2xl w-full max-w-lg h-auto transform rotate-3 scale-95 transition-transform duration-500 hover:rotate-0 hover:scale-100">
+            </div>
         </div>
     </section>
 
-    <!-- Electronics Product Listing -->
-    <section class="py-16 px-6 md:px-8 lg:px-12 bg-white">
-        <div class="container mx-auto">
+    <!-- Featured Categories Section -->
+    <section id="categories" class="py-16 px-6 md:px-8 lg:px-12 brand-secondary-bg rounded-2xl mx-auto my-12 shadow-inner">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold brand-text-primary mb-12">
+                Explore Our Top Categories
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Category Card: Smartphones -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/200x150/4A90E2/ffffff?text=Smartphone" alt="Smartphones" class="rounded-lg mb-4 mx-auto w-full max-w-[200px] h-32 object-contain">
+                    <h3 class="text-2xl font-semibold brand-text-primary mb-2">Smartphones</h3>
+                    <p class="text-gray-600 text-sm mb-4">The latest mobile technology at your fingertips.</p>
+                    <a href="#" class="brand-text-accent-orange hover:underline font-medium">Shop Now &rarr;</a>
+                </div>
+                <!-- Category Card: Laptops -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/200x150/6C5CE7/ffffff?text=Laptop" alt="Laptops" class="rounded-lg mb-4 mx-auto w-full max-w-[200px] h-32 object-contain">
+                    <h3 class="text-2xl font-semibold brand-text-primary mb-2">Laptops</h3>
+                    <p class="text-gray-600 text-sm mb-4">Powerful machines for work, study, and play.</p>
+                    <a href="#" class="brand-text-accent-orange hover:underline font-medium">Shop Now &rarr;</a>
+                </div>
+                <!-- Category Card: Smartwatches -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/200x150/F06292/ffffff?text=Smartwatch" alt="Smartwatches" class="rounded-lg mb-4 mx-auto w-full max-w-[200px] h-32 object-contain">
+                    <h3 class="text-2xl font-semibold brand-text-primary mb-2">Smartwatches</h3>
+                    <p class="text-gray-600 text-sm mb-4">Stay connected and track your fitness in style.</p>
+                    <a href="#" class="brand-text-accent-orange hover:underline font-medium">Shop Now &rarr;</a>
+                </div>
+                <!-- Category Card: Tablets -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2">
+                    <img src="https://placehold.co/200x150/E040FB/ffffff?text=Tablet" alt="Tablets" class="rounded-lg mb-4 mx-auto w-full max-w-[200px] h-32 object-contain">
+                    <h3 class="text-2xl font-semibold brand-text-primary mb-2">Tablets</h3>
+                    <p class="text-gray-600 text-sm mb-4">Versatile devices for entertainment and productivity.</p>
+                    <a href="#" class="brand-text-accent-orange hover:underline font-medium">Shop Now &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Listing Section -->
+    <section id="products" class="py-16 px-6 md:px-8 lg:px-12 bg-white rounded-2xl mx-auto my-12 shadow-lg">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold brand-text-primary mb-12">
+                Our Hottest Products
+            </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <!-- Product 1: Noise-Cancelling Headphones -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col">
-                    <img src="https://placehold.co/400x300/4A90E2/ffffff?text=Headphones" alt="Noise-Cancelling Headphones" class="rounded-lg mb-4 w-full h-48 object-cover">
-                    <h3 class="text-xl font-semibold genesys-light-blue mb-2 flex-grow">AcousticFlow Noise-Cancelling Headphones</h3>
-                    <p class="text-gray-600 text-sm mb-3">Immersive sound, supreme comfort. Perfect for travel and focus.</p>
+                <!-- Product 1: Ultrafast Smartphone -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col">
+                    <img src="https://placehold.co/400x300/4F46E5/ffffff?text=Smartphone" alt="Ultrafast Smartphone" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold brand-text-primary mb-2 flex-grow">Aura Xtreme Smartphone</h3>
+                    <p class="text-gray-600 text-sm mb-3">Next-gen performance, stunning display, and pro camera.</p>
                     <div class="flex justify-between items-center mb-4">
-                        <span class="text-2xl font-bold genesys-accent-orange-text">$199.99</span>
-                        <span class="text-sm text-gray-500 line-through">$249.99</span>
+                        <span class="text-2xl font-bold brand-text-accent-orange">$999.00</span>
+                        <span class="text-sm text-gray-500 line-through">$1099.00</span>
                     </div>
-                    <button class="genesys-accent-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                    <button class="brand-accent-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                         Add to Cart
                     </button>
                 </div>
 
-                <!-- Product 2: Smartwatch -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col">
-                    <img src="https://placehold.co/400x300/6C5CE7/ffffff?text=Smartwatch" alt="Smartwatch" class="rounded-lg mb-4 w-full h-48 object-cover">
-                    <h3 class="text-xl font-semibold genesys-light-blue mb-2 flex-grow">Chronos X Smartwatch</h3>
-                    <p class="text-gray-600 text-sm mb-3">Track your fitness, receive notifications, and stay connected.</p>
+                <!-- Product 2: Slim Ultrabook -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col">
+                    <img src="https://placehold.co/400x300/22C55E/ffffff?text=Laptop" alt="Slim Ultrabook" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold brand-text-primary mb-2 flex-grow">ZenBook Ultra 14"</h3>
+                    <p class="text-gray-600 text-sm mb-3">Lightweight, powerful, and built for productivity on the go.</p>
                     <div class="flex justify-between items-center mb-4">
-                        <span class="text-2xl font-bold genesys-accent-orange-text">$149.00</span>
-                        <span class="text-sm text-gray-500 line-through">$179.99</span>
+                        <span class="text-2xl font-bold brand-text-accent-orange">$1299.00</span>
                     </div>
-                    <button class="genesys-accent-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                    <button class="brand-accent-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                         Add to Cart
                     </button>
                 </div>
 
-                <!-- Product 3: Portable Bluetooth Speaker -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col">
-                    <img src="https://placehold.co/400x300/F06292/ffffff?text=Speaker" alt="Portable Bluetooth Speaker" class="rounded-lg mb-4 w-full h-48 object-cover">
-                    <h3 class="text-xl font-semibold genesys-light-blue mb-2 flex-grow">SonicWave Portable Speaker</h3>
-                    <p class="text-gray-600 text-sm mb-3">Powerful sound on the go with long-lasting battery life.</p>
+                <!-- Product 3: Fitness Smartwatch -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col">
+                    <img src="https://placehold.co/400x300/F97316/ffffff?text=Fitness+Watch" alt="Fitness Smartwatch" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold brand-text-primary mb-2 flex-grow">PulseFit Pro Smartwatch</h3>
+                    <p class="text-gray-600 text-sm mb-3">Advanced health tracking and smart notifications for active lifestyles.</p>
                     <div class="flex justify-between items-center mb-4">
-                        <span class="text-2xl font-bold genesys-accent-orange-text">$79.50</span>
-                        <span class="text-sm text-gray-500 line-through">$99.00</span>
+                        <span class="text-2xl font-bold brand-text-accent-orange">$249.00</span>
+                        <span class="text-sm text-gray-500 line-through">$299.00</span>
                     </div>
-                    <button class="genesys-accent-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                    <button class="brand-accent-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                         Add to Cart
                     </button>
                 </div>
 
-                <!-- Product 4: Wireless Charging Pad -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col">
-                    <img src="https://placehold.co/400x300/E040FB/ffffff?text=Charger" alt="Wireless Charging Pad" class="rounded-lg mb-4 w-full h-48 object-cover">
-                    <h3 class="text-xl font-semibold genesys-light-blue mb-2 flex-grow">ZenCharge Wireless Pad</h3>
-                    <p class="text-gray-600 text-sm mb-3">Fast and convenient charging for your compatible devices.</p>
+                <!-- Product 4: Noise-Cancelling Earbuds -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col">
+                    <img src="https://placehold.co/400x300/EF4444/ffffff?text=Earbuds" alt="Noise-Cancelling Earbuds" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold brand-text-primary mb-2 flex-grow">SilentBeats Pro Earbuds</h3>
+                    <p class="text-gray-600 text-sm mb-3">Immersive audio and crystal-clear calls, wirelessly.</p>
                     <div class="flex justify-between items-center mb-4">
-                        <span class="text-2xl font-bold genesys-accent-orange-text">$35.00</span>
+                        <span class="text-2xl font-bold brand-text-accent-orange">$179.00</span>
                     </div>
-                    <button class="genesys-accent-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                    <button class="brand-accent-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                         Add to Cart
                     </button>
                 </div>
 
-                 <!-- Product 5: Compact Digital Camera -->
-                 <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col">
-                    <img src="https://placehold.co/400x300/5C6BC0/ffffff?text=Camera" alt="Compact Digital Camera" class="rounded-lg mb-4 w-full h-48 object-cover">
-                    <h3 class="text-xl font-semibold genesys-light-blue mb-2 flex-grow">PixelPro Compact Camera</h3>
-                    <p class="text-gray-600 text-sm mb-3">Capture stunning photos and videos on the go with ease.</p>
+                <!-- Product 5: High-Performance Gaming Laptop -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col">
+                    <img src="https://placehold.co/400x300/8B5CF6/ffffff?text=Gaming+Laptop" alt="High-Performance Gaming Laptop" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold brand-text-primary mb-2 flex-grow">Apex Predator Gaming Laptop</h3>
+                    <p class="text-gray-600 text-sm mb-3">Unleash extreme gaming power with top-tier graphics.</p>
                     <div class="flex justify-between items-center mb-4">
-                        <span class="text-2xl font-bold genesys-accent-orange-text">$299.99</span>
-                        <span class="text-sm text-gray-500 line-through">$349.99</span>
+                        <span class="text-2xl font-bold brand-text-accent-orange">$1899.00</span>
+                        <span class="text-sm text-gray-500 line-through">$2000.00</span>
                     </div>
-                    <button class="genesys-accent-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                    <button class="brand-accent-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                         Add to Cart
                     </button>
                 </div>
 
-                <!-- Product 6: Ergonomic Wireless Mouse -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col">
-                    <img src="https://placehold.co/400x300/8D6E63/ffffff?text=Mouse" alt="Ergonomic Wireless Mouse" class="rounded-lg mb-4 w-full h-48 object-cover">
-                    <h3 class="text-xl font-semibold genesys-light-blue mb-2 flex-grow">GlidePad Ergonomic Mouse</h3>
-                    <p class="text-gray-600 text-sm mb-3">Comfortable design for extended use, precise tracking.</p>
+                <!-- Product 6: Versatile Tablet -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col">
+                    <img src="https://placehold.co/400x300/3B82F6/ffffff?text=Tablet" alt="Versatile Tablet" class="rounded-lg mb-4 w-full h-48 object-cover">
+                    <h3 class="text-xl font-semibold brand-text-primary mb-2 flex-grow">CanvasTab Pro 11"</h3>
+                    <p class="text-gray-600 text-sm mb-3">Perfect for creativity, entertainment, and everyday tasks.</p>
                     <div class="flex justify-between items-center mb-4">
-                        <span class="text-2xl font-bold genesys-accent-orange-text">$45.00</span>
+                        <span class="text-2xl font-bold brand-text-accent-orange">$549.00</span>
                     </div>
-                    <button class="genesys-accent-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                    <button class="brand-accent-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                         Add to Cart
                     </button>
                 </div>
@@ -191,14 +259,53 @@
         </div>
     </section>
 
+    <!-- Why Choose Carlos Landa Shop Section -->
+    <section class="py-16 px-6 md:px-8 lg:px-12 bg-white rounded-2xl mx-auto my-12 shadow-lg">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <h2 class="text-4xl md:text-5xl font-bold brand-text-primary mb-6">
+                    Why Shop at Carlos Landa?
+                </h2>
+                <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
+                    We bring you a hand-picked selection of the most innovative and reliable electronics. Enjoy competitive prices, fast shipping, and dedicated customer support. Your satisfaction is our driving force.
+                </p>
+                <button class="brand-accent-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Our Quality Promise
+                </button>
+            </div>
+            <div class="lg:w-1/2">
+                <!-- Placeholder Image -->
+                <img src="https://placehold.co/600x400/1a202c/ffffff?text=Quality+and+Innovation" alt="Quality and Innovation" class="rounded-2xl shadow-xl w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="brand-primary text-white py-16 px-6 md:px-8 lg:px-12 text-center rounded-2xl mx-auto my-12 shadow-xl">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Don't Miss Out on Exclusive Deals!
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">
+                Sign up for our newsletter to get updates on new arrivals and special promotions.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <input type="email" placeholder="Your email address" class="p-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand-accent-orange w-full sm:w-auto flex-grow max-w-md" aria-label="Email for newsletter">
+                <button class="brand-accent-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer Section -->
-    <footer class="bg-gray-900 text-gray-300 py-12 px-6 md:px-8 lg:px-12 rounded-t-lg">
+    <footer class="bg-gray-900 text-gray-300 py-12 px-6 md:px-8 lg:px-12 rounded-t-3xl">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8">
             <!-- Shop Logo/Info -->
             <div class="col-span-1 md:col-span-2 lg:col-span-1">
-                <h3 class="text-3xl font-extrabold text-white mb-4">CARLOS LANDA</h3>
+                <h3 class="text-3xl font-extrabold text-white mb-4">Carlos <span class="brand-text-accent-orange">Landa</span></h3>
                 <p class="text-gray-400 text-sm leading-relaxed">
-                    Your destination for quality products and exceptional service.
+                    Your trusted source for the latest and greatest in electronics.
                 </p>
                 <div class="flex space-x-4 mt-6">
                     <!-- Social Media Icons (placeholders) -->
@@ -216,12 +323,14 @@
 
             <!-- Shop Categories -->
             <div class="col-span-1 md:col-span-1">
-                <h4 class="text-lg font-semibold text-white mb-4">Shop</h4>
+                <h4 class="text-lg font-semibold text-white mb-4">Shop Categories</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Electronics</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Apparel</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Home Goods</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Books & Media</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Smartphones</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Laptops & PCs</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Wearables</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Audio</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Tablets</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Accessories</a></li>
                 </ul>
             </div>
 
@@ -229,20 +338,22 @@
             <div class="col-span-1 md:col-span-1">
                 <h4 class="text-lg font-semibold text-white mb-4">Company</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">About Carlos</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">About Us</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Our Story</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Careers</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Blog</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">FAQs</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Press</a></li>
                 </ul>
             </div>
 
             <!-- Support -->
             <div class="col-span-1 md:col-span-1">
-                <h4 class="text-lg font-semibold text-white mb-4">Support</h4>
+                <h4 class="text-lg font-semibold text-white mb-4">Customer Support</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Help Center</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Returns & Refunds</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Shipping Info</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Help Center & FAQs</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Order Status</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Returns & Warranty</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Contact Us</a></li>
                 </ul>
             </div>
 
@@ -253,11 +364,12 @@
                     <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Privacy Policy</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Terms of Service</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Cookie Policy</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Accessibility</a></li>
                 </ul>
             </div>
         </div>
-        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-500">
-            &copy; 2025 Carlos Landa. All rights reserved.
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center text-sm text-gray-500">
+            &copy; 2025 Carlos Landa Online Shop. All rights reserved.
         </div>
     </footer>
 
